@@ -1,7 +1,7 @@
 package com.example.session7.controller;
 
 import com.example.session7.model.dto.response.ApiResponse;
-import com.example.session7.model.entity.JobCreateDTO;
+import com.example.session7.model.dto.request.JobCreateDTO;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

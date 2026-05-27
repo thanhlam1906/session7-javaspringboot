@@ -1,4 +1,4 @@
-package com.example.session7.model.entity;
+package com.example.session7.model.dto.request;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;

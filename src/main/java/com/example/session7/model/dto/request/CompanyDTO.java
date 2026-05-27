@@ -1,6 +1,5 @@
-package com.example.session7.model.entity;
+package com.example.session7.model.dto.request;
 
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
