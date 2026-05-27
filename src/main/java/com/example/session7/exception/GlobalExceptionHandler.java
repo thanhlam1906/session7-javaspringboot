@@ -2,6 +2,7 @@ package com.example.session7.exception;
 
 import com.example.session7.model.dto.response.ApiResponse;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -25,6 +26,14 @@ public class GlobalExceptionHandler {
         });
 
         return new ApiResponse<>(false, "Du lieu dau vaof khong hop le", errors, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ApiResponse<Map<String, String>>> handleIllegalArgumentException(IllegalArgumentException ex) {
+        Map<String, String> errors = new HashMap<>();
+        errors.put("salary", ex.getMessage());
+        ApiResponse<Map<String, String>> response = new ApiResponse<>(false, "Validation failed", errors, HttpStatus.BAD_REQUEST);
+        return ResponseEntity.badRequest().body(response);
     }
 
 }
