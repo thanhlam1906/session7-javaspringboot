@@ -24,4 +24,9 @@ public class Candidate {
     private Long age;
     @Column(name = "yoe", nullable = false)
     private Long yearsOfExperience;
-}
+    @Column(name = "address", nullable = false)
+    private String address;
+    @Column(name = "bio", nullable = true)
+    private String bio;
+    @Column(name = "phone", nullable = true)
+    private String phone;}

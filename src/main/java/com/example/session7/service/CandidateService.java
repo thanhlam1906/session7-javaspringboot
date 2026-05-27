@@ -5,4 +5,5 @@ import com.example.session7.model.entity.Candidate;
 
 public interface CandidateService {
     Candidate createCandidate(CandidateCreateRequest request);
+    Candidate updateCandidate(Long id, CandidateCreateRequest request);
 }
